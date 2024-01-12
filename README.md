@@ -42,31 +42,7 @@ To start a docker server instance for the database please run:
 docker run --name fbdb -d mongo
 ```
 This will create a docker with a mongo-db database, you can fill the dataset with scraped data using the API. 
-* Scrape Facebook Posts
-- Endpoint: /scrap/
-- Parameters:
-page (str): Facebook page ID or username.
-limit (int, optional): Number of pages to scrape (default: 2).
-save (bool, optional): Save scraped posts to MongoDB (default: False).
-Example:
-```bash
-curl "http://localhost:8000/scrap/?page=your_page_id&limit=5&save=true"
-```
-* Get a Specific Post
-Endpoint: /post/
-Parameters:
-post_id (str): ID of the post to retrieve.
-Example:
-```bash
-curl "http://localhost:8000/post/?post_id=your_post_id"
-```
-* Load Data based on Query Parameters
-Endpoint: /load/
-Parameters: Any valid MongoDB query parameters.
-Example:
-```bash
-curl "http://localhost:8000/load/?param1=value1&param2=value2"
-```
+
 ### Additional Information
 The service supports automatic reloading with the --reload flag during development. You may remove it in a production environment.
 
