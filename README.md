@@ -31,7 +31,7 @@ This will start the FastAPI service on http://localhost:8000.
 ### Usage
 To build a docker named “fb_scraper” for the API please run this command in the same directory as main.py, Dockerfile, and requirements.txt:
 ```bash
-docker built -t fb_scraper
+docker build -t fb_scraper .
 ```
 You can later run the docker and test it locally using:
 ```bash
