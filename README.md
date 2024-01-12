@@ -29,6 +29,19 @@ uvicorn main:app --reload
 ```
 This will start the FastAPI service on http://localhost:8000.
 ### Usage
+To build a docker named “fb_scraper” for the API please run this command in the same directory as main.py, Dockerfile, and requirements.txt:
+```bash
+docker built -t fb_scraper
+```
+You can later run the docker and test it locally using:
+```bash
+docker run -p 8000:8000 fb_scraper
+```
+To start a docker server instance for the database please run:
+```bash
+docker run --name fbdb -d mongo
+```
+This will create a docker with a mongo-db database, you can fill the dataset with scraped data using the API. 
 * Scrape Facebook Posts
 - Endpoint: /scrap/
 - Parameters:
